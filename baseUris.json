@@ -1,0 +1,116 @@
+{
+  "apiVersion": "6.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://secure.na1.echosign.com/api/rest/v6",
+  "apis": [
+    {
+      "path": "/baseUris",
+      "operations": [
+        {
+          "summary": "Gets the base uri to access other APIs. In case other APIs are accessed from a different end point, it will be considered an invalid request.",
+          "notes": null,
+          "nickname": "getBaseUris",
+          "produces": [
+            "application/json"
+          ],
+          "authorizations": {
+            "oauth2": [
+              {
+                "scope": "agreement_read"
+              },
+              {
+                "scope": "agreement_sign"
+              },
+              {
+                "scope": "agreement_vault"
+              },
+              {
+                "scope": "agreement_write"
+              },
+              {
+                "scope": "agreement_retention"
+              },
+              {
+                "scope": "library_read"
+              },
+              {
+                "scope": "library_write"
+              },
+              {
+                "scope": "library_retention"
+              },
+              {
+                "scope": "user_login"
+              },
+              {
+                "scope": "user_read"
+              },
+              {
+                "scope": "account_read"
+              },
+              {
+                "scope": "account_write"
+              },
+              {
+                "scope": "user_write"
+              },
+              {
+                "scope": "widget_read"
+              },
+              {
+                "scope": "widget_write"
+              },
+              {
+                "scope": "application_read"
+              },
+              {
+                "scope": "application_write"
+              },
+              {
+                "scope": "agreement_send"
+              },
+              {
+                "scope": "workflow_read"
+              },
+              {
+                "scope": "webhook_read"
+              },
+              {
+                "scope": "webhook_write"
+              },
+              {
+                "scope": "webhook_retention"
+              }
+            ]
+          },
+          "errorResponses": [
+            {
+              "reason": "INVALID_ACCESS_TOKEN: Access token provided is invalid or has expired.",
+              "code": "401"
+            },
+            {
+              "reason": "NO_AUTHORIZATION_HEADER: Authorization header not provided.",
+              "code": "401"
+            }
+          ],
+          "httpMethod": "GET",
+          "type": "BaseUriInfo",
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "description": "An <a href=\"#\" class=\"link-oauth\">OAuth Access Token</a> with any of the valid scopes<ul></ul>in the format <b>'Bearer {accessToken}'.",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "order": 0
+        }
+      ]
+    }
+  ],
+  "resourcePath": "/baseUris",
+  "produces": [
+    "application/json"
+  ]
+}
