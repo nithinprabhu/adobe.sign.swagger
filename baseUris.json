@@ -1,13 +1,19 @@
 {
-  "apiVersion": "1.0.0",
+  "apiVersion": "6.0.0",
   "swaggerVersion": "1.2",
+  "basePath": "https://secure.na1.echosign.com/api/rest/v6",
   "apis": [
     {
       "path": "/baseUris",
-      "description": "Gets the base uri to access other APIs. In case other APIs are accessed from a different end point, it will be considered an invalid request."
-    }
-  ],
-            "authorizations": {
+      "operations": [
+        {
+          "summary": "Gets the base uri to access other APIs. In case other APIs are accessed from a different end point, it will be considered an invalid request.",
+          "notes": null,
+          "nickname": "getBaseUris",
+          "produces": [
+            "application/json"
+          ],
+          "authorizations": {
             "oauth2": [
               {
                 "scope": "agreement_read"
@@ -87,7 +93,7 @@
               "code": "401"
             }
           ],
-		            "httpMethod": "GET",
+          "httpMethod": "GET",
           "type": "BaseUriInfo",
           "parameters": [
             {
@@ -97,5 +103,14 @@
               "type": "string",
               "required": true
             }
-          ]
-		  }
+          ],
+          "order": 0
+        }
+      ]
+    }
+  ],
+  "resourcePath": "/baseUris",
+  "produces": [
+    "application/json"
+  ]
+}
